@@ -9,19 +9,20 @@ namespace DXMap_Runtime {
         }
 
         private void Window_Loaded (object sender, RoutedEventArgs e) {
-            // Create a map control.
+            // Create a map control and add it to the window.
             MapControl map = new MapControl();
+            this.Content = map;
 
             // Create a layer.
-            ImageTilesLayer layer = new ImageTilesLayer();
+            ImageLayer layer = new ImageLayer() {
+                DataProvider = new BingMapDataProvider() {
+                    BingKey = "Insert your Bing Maps key here.",
+                    Kind = BingMapKind.Road
+                }
+            };
             map.Layers.Add(layer);
-
-            // Create a data provider.
-            OpenStreetMapDataProvider provider = new OpenStreetMapDataProvider();
-            layer.DataProvider = provider;
-
-            // Add the map control to the window.
-            this.Content = map;
+            map.ZoomLevel = 4;
+            map.CenterPoint = new GeoPoint(40, -100);
         }
 
     }
