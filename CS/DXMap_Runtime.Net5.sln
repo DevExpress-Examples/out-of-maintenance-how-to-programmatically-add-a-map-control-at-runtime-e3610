@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXMap_Runtime", "DXMap_Runtime.csproj", "{B318661C-F8FB-4EA7-BE2C-304B492DE4A9}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXMap_Runtime", "DXMap_Runtime.Net5.csproj", "{B318661C-F8FB-4EA7-BE2C-304B492DE4A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
